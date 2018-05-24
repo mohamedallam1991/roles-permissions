@@ -38,6 +38,9 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "php artisan migrate --seed"
+         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
